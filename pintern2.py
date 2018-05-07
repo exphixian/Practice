@@ -18,7 +18,6 @@ def analyze_requests(log_path):
             largest_urls.append(line.split()[-1])
             largest_urls.append(line.split()[6])
         largest_urls = [(largest_urls[i], largest_urls[i+1])
-                        for i in range(0, len(largest_urls), 2)]
 
 #Sort in decreasing value & check for 15 longest processing URLs
     largest_urls.sort(reverse = True)
